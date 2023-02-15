@@ -1,0 +1,26 @@
+html{
+    background: linear-gradient(81deg, #b0c594, #78a5cb);
+}
+body{
+    background-color: transparent;
+}
+.avatar{
+    width: 50%;
+}
+.main-container{
+    background-color: lightblue;
+}
+.menu{
+    background-color: rgb(201, 201, 255);
+}
+.tab{
+    width: 100%;
+    transition: all .4s;
+    transform: translateX(100px);
+    opacity: 0;
+}
+.tab.active{
+    left: 0;
+    transform: translateX(0px);
+    opacity: 1;
+} 

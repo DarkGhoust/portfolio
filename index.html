@@ -6,83 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Portfolio</title>
-    <style>
-        html{
-            background: linear-gradient(81deg, #b0c594, #78a5cb);
-        }
-        body{
-            background-color: transparent;
-        }
-        .avatar{
-            width: 50%;
-        }
-        .main-container{
-            background-color: lightblue;
-        }
-        .menu{
-            background-color: rgb(201, 201, 255);
-        }
-        .tab{
-            width: 100%;
-            transition: all .4s;
-            transform: translateX(100px);
-            opacity: 0;
-        }
-        .tab.active{
-            left: 0;
-            transform: translateX(0px);
-            opacity: 1;
-        } 
-        
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio | Andrii Oleniuk</title>
 </head>
 <body>
     <section class="container p-2">
         <div class="row rounded-3 m-0 main-container">
             <div class="col-md-4 rounded-3 p-3 menu">
                 <div class="menu-header d-flex flex-column">
-                    <!-- <img src="Andrii.jpg" class="rounded-circle avatar" alt="">
+                    <img src="Andrii.jpg" class="rounded-circle avatar" alt="">
                     <h3>Andrii Oleniuk</h3>
-                    <p>Fullstack developer</p> -->
+                    <p>Fullstack developer</p>
                     <nav>
                         <ul>
-                            <li class="active" tab-id="home">Home</li>
-                            <li tab-id="2">2</li>
-                            <li tab-id="3">3</li>
+                            <li class="active" tab-id="home"><i class="fa-solid fa-house-chimney"></i> Home</li>
+                            <li tab-id="education"><i class="fa-solid fa-user-graduate"></i> Education</li>
+                            <li tab-id="skills"><i class="fa-solid fa-chart-simple"></i> Skills</li>
+                            <li tab-id="experience"><i class="fa-solid fa-pen-clip"></i> Experience</li>
+                            <li tab-id="projects"><i class="fa-solid fa-briefcase"></i> Projects</li>
                         </ul>
                     </nav>
                 </div>
-                <!-- <div class="social-footer">
+                <div class="social-footer">
                     <ul>
-                        <li>LinkedIn</li>
-                        <li>Github</li>
-                        <li>LinkedIn</li>
-                        <li>Instagram</li>
-                        <li>sadasd</li>
+                        <li>
+                            <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link"><i class="fa-brands fa-github"></i>Github</a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link"><i class="fa-solid fa-paper-plane"></i>Email</a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                        </li>
                     </ul>
-                </div> -->
+                </div>
             </div>
             <div class="col-md-8 p-3" style="position: relative;">
                 <div class="tab active" id="home">
                     Home
                 </div>
-                <div class="tab" id="2">
+                <div class="tab" id="education">
                     2j b1j2o ho1ihih ohi 3h2o4h 2ho4 32hoh3 2phoh4 2ho3poih432 hj32g h4f32fh4 h3f2
                 </div>
-                <div class="tab" id="3">
+                <div class="tab" id="skills">
+                    3
+                </div>
+                <div class="tab" id="experience">
+                    3
+                </div>
+                <div class="tab" id="projects">
                     3
                 </div>
             </div> 
         </div>
     </section>
-
-    <script>
-        $('.menu nav li').click(function(){
-            const tabId = $(this).attr('tab-id')
-            $('.tab').hide().removeClass('active')
-            $('#' + tabId).show().addClass('active')
-        })
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
