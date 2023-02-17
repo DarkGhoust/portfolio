@@ -1,17 +1,46 @@
+:root{
+    --main-color: black;
+    --glass-color: rgba( 255, 255, 255, 0.25 );
+    --text-color: white;
+}
+
 html{
-    background: linear-gradient(81deg, #b0c594, #78a5cb);
+    background: linear-gradient(81deg, #68ddda, #6cdbea);
 }
 body{
     background-color: transparent;
+    min-height: 100vh;
 }
 .avatar{
     width: 50%;
 }
 .main-container{
-    background-color: lightblue;
+    background: var(--glass-color);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .menu{
-    background-color: rgb(201, 201, 255);
+    background: var(--glass-color);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+}
+.menu ul{
+    list-style: none;
+}
+
+.a-btn{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    transition: all .4s;
+    cursor: pointer;
+}
+.a-btn a{
+    color: inherit;
+}
+.a-btn:hover{
+    /* transform: scale(.9); */
+    transform: rotate(5deg) scale(.9);
 }
 .tab{
     width: 100%;
@@ -20,7 +49,14 @@ body{
     opacity: 0;
 }
 .tab.active{
-    left: 0;
     transform: translateX(0px);
     opacity: 1;
 } 
+
+.progress{
+    background: var(--glass-color);
+    height: 25px;
+}
+.progress-bar{
+    background-color: var(--main-color);
+}

@@ -3,3 +3,6 @@ $('.menu nav li').click(function(){
     $('.tab').hide().removeClass('active')
     $('#' + tabId).show().addClass('active')
 })
+
+$('.tab').hide()
+$('.tab.active').show()
