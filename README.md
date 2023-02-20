@@ -1,1 +1,3 @@
-You can visualize portfolio <a href="https://htmlpreview.github.io/?https://github.com/DarkGhoust/Portfolio/blob/main/index.html" target="_blank">here</a>: 
+Hello and welcome to my full stack developer portfolio! My name is [Your Name], and I'm a passionate and experienced developer with a focus on creating high-quality, user-friendly web applications. With a strong background in both front-end and back-end development, I'm confident in my ability to create dynamic and responsive websites that meet the needs of businesses and individuals alike. So take a look around and feel free to reach out if you have any questions or would like to discuss a potential project.
+
+You can visualize portfolio <a href="https://htmlpreview.github.io/?https://github.com/DarkGhoust/Portfolio/blob/main/index.html" target="_blank">here</a>.
