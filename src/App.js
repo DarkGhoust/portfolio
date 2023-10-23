@@ -6,7 +6,7 @@ function App() {
 		<>
 			<header>
 				<h1>Andrii Oleniuk</h1>
-				<h2>Full stack developer</h2>
+				<h5>Full stack developer</h5>
 				<Menu />
 			</header>
 			<main>

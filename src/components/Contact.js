@@ -1,6 +1,5 @@
-import VerticalGlitch from "./VerticalGlitch"
 
-function Home(){
+function Contact(){
     return(
         <>
             <p>
@@ -28,9 +27,8 @@ function Home(){
                 challenging problems, and continue growing as a
                 Fullstack Developer.
             </p>
-            <VerticalGlitch text="Text"/>
         </>
     )
 }
 
-export default Home
+export default Contact

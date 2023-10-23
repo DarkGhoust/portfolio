@@ -14,6 +14,7 @@ code {
 
 :root{
     --black: black;
+    --gray: gray;
     --pad: 1.5em;
 }
 
@@ -25,6 +26,7 @@ code {
 
 html{
     background-color: #e6e6e6;
+    font-family: 'Work Sans', sans-serif;
 }
 
 body{
@@ -34,8 +36,32 @@ body{
     flex-direction: column;
     color: var(--black);
 }
+p{
+    margin-bottom: 1.2em;
+}
+
 #root{
     border: 1px solid var(--black);
     flex: 1;
     padding: var(--pad);
+}
+
+h1{
+    --size: 60px;
+    font-size: var(--size);
+    line-height: var(--size);
+    font-weight: 100;
+}
+
+h5{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+header{
+    margin-bottom: 24px;
+}
+
+.light-text{
+    color: var(--gray);
 }
