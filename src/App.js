@@ -16,7 +16,7 @@ function App() {
 					<VerticalGlitch text="Text"/>
 				</div>
 				<div className="routes_container">
-					<div className="page">
+					<div className="page d-flex f-column">
 						<AppRoutes />
 					</div>
 				</div>
