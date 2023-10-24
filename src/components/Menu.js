@@ -1,31 +1,50 @@
 import React from "react"
-import Glitch from "./Glitch"
-import { Link } from "react-router-dom"
+import HoverableLink from "./HoberableLink"
+import Radio from "./Radio"
 
 import "../css/menu.css"
 
 function Menu(){
-    const enableGlitch = (e) =>{
-        e.target.innerHTML = <Glitch text={e.target.innerHTML}/>
+    const [buttons, setButtons] = React.useState([
+        {
+            name: "HOME",
+            to: "/",
+            isActive: true
+        },
+        {
+            name: "PROJECTS",
+            to: "/projects",
+            isActive: false
+        },
+        {
+            name: "CONTACTS",
+            to: "/contacts",
+            isActive: false
+        },
+    ])
+
+    console.log(buttons)
+
+    const changeActive = (id) =>{
+        const newButtons = buttons.map(item => {
+            item.isActive = false
+            return item
+        })
+        newButtons[id].isActive = true
+        setButtons(newButtons)
     }
 
-    return(
-        <nav>
-            <HoverableLink to="/" text="Home" />
-            <HoverableLink to="/projects" text="Projects" />
-            <HoverableLink to="/contacts" text="Contacts" />
-        </nav>
+    const buttonsHTML = buttons.map((item, id) => 
+        <div onClick={ () => {changeActive(id)} }>
+            <Radio isChecked={item.isActive} />
+            <HoverableLink to={item.to} text={item.name} />
+        </div>
     )
-}
-
-function HoverableLink({to, text}){
-    const [isHovered, setIsHovered] = React.useState(false)
 
     return(
-        <Link to={to} 
-            onMouseEnter={() => { setIsHovered(true) }} 
-            onMouseLeave={() => { setIsHovered(false) }}
-        >{!isHovered ? text : <Glitch text={text}/> }</Link>
+        <nav className="monospace">
+            {buttonsHTML}
+        </nav>
     )
 }
 

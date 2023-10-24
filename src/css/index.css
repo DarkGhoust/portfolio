@@ -1,8 +1,10 @@
+@font-face {
+    font-family: ElectroHarmonix;
+    src: url("../../public/fonts/electroharmonix.regular.otf") format("opentype");
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -30,10 +32,8 @@ html{
 }
 
 body{
-    min-height: 100vh;
-    padding: var(--pad);
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    padding: calc( var(--pad) * 1.5 ) var(--pad) var(--pad) var(--pad);
     color: var(--black);
 }
 p{
@@ -44,6 +44,7 @@ p{
     border: 1px solid var(--black);
     flex: 1;
     padding: var(--pad);
+    overflow: hidden;
 }
 
 h1{
@@ -62,6 +63,66 @@ header{
     margin-bottom: 24px;
 }
 
+
+main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex: 1;
+}
+.d-flex{
+    display: flex;
+}
+.f-column{
+    flex-direction: column;
+}
+
 .light-text{
     color: var(--gray);
+}
+.monospace{
+    font-family: monospace;
+}
+
+.glitch_container,
+.routes_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+.glitch_container{
+    align-items: flex-start;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    overflow: auto;
+    height: 100%;
+}
+
+.vertical_glitch{
+    position: absolute;
+    top: 0;
+    font-size: 50px;   
+    word-break: keep-all;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-top: 24px;
+    font-family: ElectroHarmonix;
+    letter-spacing: -.3em;
+}
+
+@media (max-width: 570px){
+    :root{
+        --pad: 1em;
+    }
+
+    body{
+        padding: calc( var(--pad) * 3 ) var(--pad) var(--pad) var(--pad);
+    }
+
+    main{
+        grid-template-columns: 100%;
+    }
 }

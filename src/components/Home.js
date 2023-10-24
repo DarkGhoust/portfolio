@@ -1,4 +1,3 @@
-import VerticalGlitch from "./VerticalGlitch"
 
 function Home(){
     return(
@@ -28,7 +27,6 @@ function Home(){
                 challenging problems, and continue growing as a
                 Fullstack Developer.
             </p>
-            <VerticalGlitch text="Text"/>
         </>
     )
 }

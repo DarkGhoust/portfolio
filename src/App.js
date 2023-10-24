@@ -1,16 +1,25 @@
 import Menu from "./components/Menu"
 import AppRoutes from "./components/AppRoutes"
+import VerticalGlitch from "./components/VerticalGlitch"
 
 function App() {
 	return (
 		<>
 			<header>
 				<h1>Andrii Oleniuk</h1>
-				<h5>Full stack developer</h5>
+				<p className="light-text monospace">Full stack developer</p>
 				<Menu />
 			</header>
 			<main>
-				<AppRoutes />
+				<div className="glitch_container">
+					<span className="light-text monospace">Skills</span>
+					<VerticalGlitch text="Text"/>
+				</div>
+				<div className="routes_container">
+					<div className="page">
+						<AppRoutes />
+					</div>
+				</div>
 			</main>
 		</>
 	)
