@@ -11,30 +11,25 @@
 
         .animate-charcter
         {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            letter-spacing: -0.3em;
-            line-height: .8em;
+            width: 200px;
+            height: 200px;
             background-image: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%);
-            background-size: auto auto;
-            background-clip: border-box;
             background-size: auto 200%;
-            color: #fff;
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textclip 10s linear infinite;
-            display: inline-block;
-            font-size: 12px;
+            animation: textclip 50s ease-in-out infinite;       
             background-position: center 200%;
         }
 
         @keyframes textclip {
-        to {
-            background-position: center 0%;
-        }
-        }
+            0%{
+                background-position: center 100%;
+            }
+            50%{
+                background-position: center 0%;
+            }
+            100%{
+                background-position: center 100%;
+            }
+        } 
     </style>
 </head>
 <body>
