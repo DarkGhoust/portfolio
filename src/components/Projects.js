@@ -6,6 +6,7 @@ function Projects(){
             <h2>Pet projects</h2>
             <ul>
                 <li className="light-text"><HoverableLink to="#" text="Nonogram ↗"/></li>
+                <li className="light-text"><HoverableLink to="#" text="Movies Website ↗"/></li>
             </ul>
             <hr className="spacer"/>
             <h2>Work projects</h2>
