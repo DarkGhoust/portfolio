@@ -1,6 +1,7 @@
 import React from "react"
 import HoverableLink from "./HoberableLink"
 import Radio from "./Radio"
+import { Link } from "react-router-dom"
 
 import "../css/menu.css"
 
@@ -23,8 +24,6 @@ function Menu(){
         },
     ])
 
-    console.log(buttons)
-
     const changeActive = (id) =>{
         const newButtons = buttons.map(item => {
             item.isActive = false
@@ -35,10 +34,10 @@ function Menu(){
     }
 
     const buttonsHTML = buttons.map((item, id) => 
-        <div onClick={ () => {changeActive(id)} }>
+        <Link to={item.to} onClick={ () => {changeActive(id)} }>
             <Radio isChecked={item.isActive} />
             <HoverableLink to={item.to} text={item.name} />
-        </div>
+        </Link>
     )
 
     return(

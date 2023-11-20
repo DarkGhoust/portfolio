@@ -5,11 +5,9 @@ function Projects(){
         <>
             <h2>Pet projects</h2>
             <ul>
-                <li><a className="scale" href="#">Pet project 1</a></li>
-                <li><HoverableLink to="#" text="Pet project 3"/></li>
-                <li><a className="scale" href="#">Pet project 2</a></li>
-                <li><a className="scale" href="#">Pet project 3</a></li>
+                <li className="light-text"><HoverableLink to="#" text="Nonogram ↗"/></li>
             </ul>
+            <hr className="spacer"/>
             <h2>Work projects</h2>
             <ul>
                 <li>Website for ordering assets <p className="light-text monospace">(Laravel, SQL, React)</p></li>

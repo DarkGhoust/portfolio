@@ -1,0 +1,31 @@
+.animate-characters
+{
+	writing-mode: vertical-rl;
+    text-orientation: upright;
+	position: absolute;
+	top: calc( var(--pad) * 1.5 );
+	right: var(--pad);
+	width: calc(100% - 2 * var(--pad));
+	height: calc(100% - 2.5 * var(--pad));
+	background-image: linear-gradient(180deg, #dbdbdb 50%, transparent 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: -7px;
+	line-height: .7em;
+	background-size: auto 200%;
+	animation: textclip 12s ease-in-out infinite;       
+	background-position: center 200%;
+	z-index: -1;
+}
+
+@keyframes textclip {
+	0%{
+		background-position: center 100%;
+	}
+	50%{
+		background-position: center 0%;
+	}
+	100%{
+		background-position: center 100%;
+	}
+} 

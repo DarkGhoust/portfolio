@@ -15,8 +15,8 @@ code {
 }
 
 :root{
-    --black: black;
-    --gray: gray;
+    --black: #3f3f3f;
+    --gray: #505050;
     --pad: 1.5rem;
 }
 
@@ -40,6 +40,7 @@ body{
     height: 100vh;
     padding: calc( var(--pad) * 1.5 ) var(--pad) var(--pad) var(--pad);
     color: var(--black);
+    overflow: hidden;
 }
 p{
     margin-bottom: 1.2em;
@@ -56,7 +57,7 @@ h1{
     --size: 60px;
     font-size: var(--size);
     line-height: var(--size);
-    font-weight: 100;
+    font-weight: 200;
 }
 
 h2{
@@ -79,7 +80,7 @@ header{
 
 main{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     flex: 1;
 }
 .d-flex{
@@ -91,6 +92,7 @@ main{
 
 .light-text{
     color: var(--gray);
+    font-weight: 600;
 }
 .monospace{
     font-family: monospace;
@@ -114,10 +116,16 @@ main{
 .page{
     position: absolute;
     top: 0;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 100%;
     justify-content: flex-end;
     text-align: end;
+    padding: 1em;
+}
+
+.page ul{
+    list-style-type: none;
 }
 
 .vertical_glitch{
@@ -130,6 +138,12 @@ main{
     margin-top: 24px;
     font-family: ElectroHarmonix;
     letter-spacing: -.3em;
+}
+hr{
+    border: 0;
+}
+.spacer{
+    margin-bottom: 12px;
 }
 
 .scale:hover{
@@ -146,7 +160,28 @@ main{
         padding: calc( var(--pad) * 3 ) var(--pad) var(--pad) var(--pad);
     }
 
-    main{
-        grid-template-columns: 100%;
+    .page{
+        font-size: 14px;
     }
+}
+
+@media (max-width: 768px){
+    main{
+        grid-template-columns: 30% 70%;
+    }
+    .page{
+        justify-content: flex-start;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+   
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+   
+::-webkit-scrollbar-thumb {
+    background-color: var(--black);
 }

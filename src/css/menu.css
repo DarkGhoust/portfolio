@@ -1,12 +1,12 @@
 nav{
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: var(--pad);
     display: flex;
     gap: 24px;
 }
 
-nav>div{
+nav>a{
     display: flex;
     align-items: center;
 }
@@ -15,4 +15,11 @@ nav a{
     text-decoration: none;
     color: var(--black);
     font-weight: 200;
+}
+
+@media (max-width: 570px){
+    nav{
+        top: 28px;
+        left: 16px;
+    }
 }
