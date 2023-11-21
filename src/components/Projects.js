@@ -1,12 +1,12 @@
-import HoverableLink from "./HoberableLink"
+import HoverableTargetLink from "./HoverableTargetLink"
 
 function Projects(){
     return(
         <>
             <h2>Pet projects</h2>
             <ul>
-                <li className="light-text"><HoverableLink to="#" text="Nonogram ↗"/></li>
-                <li className="light-text"><HoverableLink to="#" text="Movies Website ↗"/></li>
+                <li className="light-text spacer"><HoverableTargetLink to="https://darkghoust.github.io/nonogram" text="Nonogram ↗"/></li>
+                <li className="light-text spacer"><HoverableTargetLink to="https://darkghoust.github.io/movies_website" text="Movies Website ↗"/></li>
             </ul>
             <hr className="spacer"/>
             <h2>Work projects</h2>

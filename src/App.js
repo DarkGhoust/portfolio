@@ -6,11 +6,11 @@ import VerticalGlitch from "./components/VerticalGlitch"
 function App() {
 	return (
 		<>
-			<header>
+			<div className="header">
 				<h1>Andrii Oleniuk</h1>
 				<p className="light-text monospace">Full stack developer</p>
 				<Menu />
-			</header>
+			</div>
 			<BgMatrix />
 			<main>
 				<div className="glitch_container">
